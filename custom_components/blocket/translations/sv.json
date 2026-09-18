@@ -1,0 +1,39 @@
+{
+	"config": {
+		"step": {
+			"user": {
+				"title": "Lägg till Blocket sökbevakning (inofficiell)",
+				"description": "Övervaka en Blocket-sökning för nya annonser. Detta är en inofficiell integration, ej kopplad till Blocket AB eller Schibsted.",
+				"data": {
+					"search_url": "Blocket sök-URL",
+					"watch_name": "Bevakningsnamn",
+					"poll_interval": "Uppdateringsinterval (minuter)"
+				}
+			}
+		},
+		"error": {
+			"invalid_url": "Ange en giltig Blocket sök-URL (t.ex. https://www.blocket.se/mobility/search/car eller https://www.blocket.se/annonser/...)",
+			"invalid_interval": "Uppdateringsinterval måste vara mellan 5 och 1440 minuter"
+		},
+		"abort": {
+			"already_configured": "Denna sök-URL bevakas redan"
+		}
+	},
+	"options": {
+		"step": {
+			"init": {
+				"title": "Konfigurera Blocket-bevakning",
+				"description": "Uppdatera bevakningsinställningar",
+				"data": {
+					"search_url": "Blocket sök-URL",
+					"watch_name": "Bevakningsnamn",
+					"poll_interval": "Uppdateringsinterval (minuter)"
+				}
+			}
+		},
+		"error": {
+			"invalid_url": "Ange en giltig Blocket sök-URL",
+			"invalid_interval": "Uppdateringsinterval måste vara mellan 5 och 1440 minuter"
+		}
+	}
+}
