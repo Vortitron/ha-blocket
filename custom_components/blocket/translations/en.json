@@ -1,0 +1,39 @@
+{
+	"config": {
+		"step": {
+			"user": {
+				"title": "Add Blocket Search Watch (unofficial)",
+				"description": "Monitor a Blocket search URL for new listings. This is an unofficial integration, not affiliated with Blocket AB or Schibsted.",
+				"data": {
+					"search_url": "Blocket Search URL",
+					"watch_name": "Watch Name",
+					"poll_interval": "Poll Interval (minutes)"
+				}
+			}
+		},
+		"error": {
+			"invalid_url": "Please provide a valid Blocket search URL (e.g. https://www.blocket.se/mobility/search/car or https://www.blocket.se/annonser/...)",
+			"invalid_interval": "Poll interval must be between 5 and 1440 minutes"
+		},
+		"abort": {
+			"already_configured": "This search URL is already being watched"
+		}
+	},
+	"options": {
+		"step": {
+			"init": {
+				"title": "Configure Blocket Watch",
+				"description": "Update watch settings",
+				"data": {
+					"search_url": "Blocket Search URL",
+					"watch_name": "Watch Name",
+					"poll_interval": "Poll Interval (minutes)"
+				}
+			}
+		},
+		"error": {
+			"invalid_url": "Please provide a valid Blocket search URL",
+			"invalid_interval": "Poll interval must be between 5 and 1440 minutes"
+		}
+	}
+}
