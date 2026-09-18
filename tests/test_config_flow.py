@@ -1,5 +1,11 @@
 """Tests for the Blocket config flow."""
-from custom_components.blocket.config_flow import _validate_blocket_url
+import pytest
+
+from custom_components.blocket.config_flow import (
+	_build_mobility_url,
+	_build_recommerce_url,
+	_validate_blocket_url,
+)
 
 
 class TestConfigFlow:
@@ -49,3 +55,62 @@ class TestConfigFlow:
 		"""Test rejection of individual listing URL."""
 		url = "https://www.blocket.se/mobility/item/26688057"
 		assert _validate_blocket_url(url) is False
+
+
+class TestURLBuilder:
+	"""Test URL builder functions."""
+
+	def test_build_mobility_url_all_sweden(self):
+		"""Test building mobility URL for all of Sweden."""
+		url = _build_mobility_url("all", "PUBLISHED_DESC")
+		assert url == "https://www.blocket.se/mobility/search/car?sort=PUBLISHED_DESC"
+
+	def test_build_mobility_url_with_region(self):
+		"""Test building mobility URL with specific region."""
+		url = _build_mobility_url("0.300001", "PUBLISHED_DESC")
+		assert url == "https://www.blocket.se/mobility/search/car?location=0.300001&sort=PUBLISHED_DESC"
+
+	def test_build_mobility_url_skane(self):
+		"""Test building mobility URL for Skåne."""
+		url = _build_mobility_url("0.300012", "PUBLISHED_DESC")
+		assert url == "https://www.blocket.se/mobility/search/car?location=0.300012&sort=PUBLISHED_DESC"
+
+	def test_build_mobility_url_price_sort(self):
+		"""Test building mobility URL with price sorting."""
+		url = _build_mobility_url("all", "PRICE_ASC")
+		assert url == "https://www.blocket.se/mobility/search/car?sort=PRICE_ASC"
+
+	def test_build_recommerce_url_all(self):
+		"""Test building recommerce URL with no filters."""
+		url = _build_recommerce_url("all", "all")
+		assert url == "https://www.blocket.se/recommerce/forsale/search"
+
+	def test_build_recommerce_url_with_category(self):
+		"""Test building recommerce URL with category."""
+		url = _build_recommerce_url("0.93", "all")
+		assert url == "https://www.blocket.se/recommerce/forsale/search?category=0.93"
+
+	def test_build_recommerce_url_with_region(self):
+		"""Test building recommerce URL with region."""
+		url = _build_recommerce_url("all", "0.300001")
+		assert url == "https://www.blocket.se/recommerce/forsale/search?location=0.300001"
+
+	def test_build_recommerce_url_category_and_region(self):
+		"""Test building recommerce URL with both category and region."""
+		url = _build_recommerce_url("0.93", "0.300001")
+		assert url == "https://www.blocket.se/recommerce/forsale/search?category=0.93&location=0.300001"
+
+	def test_build_recommerce_url_furniture(self):
+		"""Test building recommerce URL for furniture category."""
+		url = _build_recommerce_url("0.78", "all")
+		assert url == "https://www.blocket.se/recommerce/forsale/search?category=0.78"
+
+	def test_validate_builder_generated_mobility_url(self):
+		"""Test that builder-generated mobility URLs are valid."""
+		url = _build_mobility_url("0.300001", "PUBLISHED_DESC")
+		assert _validate_blocket_url(url) is True
+
+	def test_validate_builder_generated_recommerce_url(self):
+		"""Test that builder-generated recommerce URLs are valid."""
+		url = _build_recommerce_url("0.93", "0.300001")
+		assert _validate_blocket_url(url) is True

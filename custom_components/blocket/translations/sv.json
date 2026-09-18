@@ -5,7 +5,41 @@
 				"title": "Lägg till Blocket sökbevakning (inofficiell)",
 				"description": "Övervaka en Blocket-sökning för nya annonser. Detta är en inofficiell integration, ej kopplad till Blocket AB eller Schibsted.",
 				"data": {
+					"input_method": "Inmatningsmetod"
+				}
+			},
+			"url": {
+				"title": "Lägg till Blocket sökbevakning (inofficiell)",
+				"description": "Ange din Blocket sök-URL",
+				"data": {
 					"search_url": "Blocket sök-URL",
+					"watch_name": "Bevakningsnamn",
+					"poll_interval": "Uppdateringsinterval (minuter)"
+				}
+			},
+			"builder_type": {
+				"title": "Välj marknadsplats",
+				"description": "Välj vilken typ av sökning du vill bevaka",
+				"data": {
+					"marketplace_type": "Marknadsplatstyp"
+				}
+			},
+			"builder_mobility": {
+				"title": "Bygg bilsökning",
+				"description": "Konfigurera dina bilsökparametrar",
+				"data": {
+					"region": "Region",
+					"sort_order": "Sorteringsordning",
+					"watch_name": "Bevakningsnamn",
+					"poll_interval": "Uppdateringsinterval (minuter)"
+				}
+			},
+			"builder_recommerce": {
+				"title": "Bygg marknadsplatssökning",
+				"description": "Konfigurera dina marknadsplatssökparametrar",
+				"data": {
+					"category": "Kategori",
+					"region": "Region",
 					"watch_name": "Bevakningsnamn",
 					"poll_interval": "Uppdateringsinterval (minuter)"
 				}
@@ -25,7 +59,41 @@
 				"title": "Konfigurera Blocket-bevakning",
 				"description": "Uppdatera bevakningsinställningar",
 				"data": {
+					"input_method": "Inmatningsmetod"
+				}
+			},
+			"url": {
+				"title": "Konfigurera Blocket-bevakning",
+				"description": "Uppdatera din Blocket sök-URL",
+				"data": {
 					"search_url": "Blocket sök-URL",
+					"watch_name": "Bevakningsnamn",
+					"poll_interval": "Uppdateringsinterval (minuter)"
+				}
+			},
+			"builder_type": {
+				"title": "Välj marknadsplats",
+				"description": "Välj vilken typ av sökning du vill bevaka",
+				"data": {
+					"marketplace_type": "Marknadsplatstyp"
+				}
+			},
+			"builder_mobility": {
+				"title": "Bygg bilsökning",
+				"description": "Konfigurera dina bilsökparametrar",
+				"data": {
+					"region": "Region",
+					"sort_order": "Sorteringsordning",
+					"watch_name": "Bevakningsnamn",
+					"poll_interval": "Uppdateringsinterval (minuter)"
+				}
+			},
+			"builder_recommerce": {
+				"title": "Bygg marknadsplatssökning",
+				"description": "Konfigurera dina marknadsplatssökparametrar",
+				"data": {
+					"category": "Kategori",
+					"region": "Region",
 					"watch_name": "Bevakningsnamn",
 					"poll_interval": "Uppdateringsinterval (minuter)"
 				}
