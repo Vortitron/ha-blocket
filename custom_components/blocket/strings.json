@@ -5,7 +5,41 @@
 				"title": "Add Blocket Search Watch (unofficial)",
 				"description": "Monitor a Blocket search URL for new listings. This is an unofficial integration, not affiliated with Blocket AB or Schibsted.",
 				"data": {
+					"input_method": "Input Method"
+				}
+			},
+			"url": {
+				"title": "Add Blocket Search Watch (unofficial)",
+				"description": "Enter your Blocket search URL",
+				"data": {
 					"search_url": "Blocket Search URL",
+					"watch_name": "Watch Name",
+					"poll_interval": "Poll Interval (minutes)"
+				}
+			},
+			"builder_type": {
+				"title": "Choose Marketplace Type",
+				"description": "Select the type of search you want to monitor",
+				"data": {
+					"marketplace_type": "Marketplace Type"
+				}
+			},
+			"builder_mobility": {
+				"title": "Build Cars Search",
+				"description": "Configure your car search parameters",
+				"data": {
+					"region": "Region",
+					"sort_order": "Sort Order",
+					"watch_name": "Watch Name",
+					"poll_interval": "Poll Interval (minutes)"
+				}
+			},
+			"builder_recommerce": {
+				"title": "Build Marketplace Search",
+				"description": "Configure your marketplace search parameters",
+				"data": {
+					"category": "Category",
+					"region": "Region",
 					"watch_name": "Watch Name",
 					"poll_interval": "Poll Interval (minutes)"
 				}
@@ -25,7 +59,41 @@
 				"title": "Configure Blocket Watch",
 				"description": "Update watch settings",
 				"data": {
+					"input_method": "Input Method"
+				}
+			},
+			"url": {
+				"title": "Configure Blocket Watch",
+				"description": "Update your Blocket search URL",
+				"data": {
 					"search_url": "Blocket Search URL",
+					"watch_name": "Watch Name",
+					"poll_interval": "Poll Interval (minutes)"
+				}
+			},
+			"builder_type": {
+				"title": "Choose Marketplace Type",
+				"description": "Select the type of search you want to monitor",
+				"data": {
+					"marketplace_type": "Marketplace Type"
+				}
+			},
+			"builder_mobility": {
+				"title": "Build Cars Search",
+				"description": "Configure your car search parameters",
+				"data": {
+					"region": "Region",
+					"sort_order": "Sort Order",
+					"watch_name": "Watch Name",
+					"poll_interval": "Poll Interval (minutes)"
+				}
+			},
+			"builder_recommerce": {
+				"title": "Build Marketplace Search",
+				"description": "Configure your marketplace search parameters",
+				"data": {
+					"category": "Category",
+					"region": "Region",
 					"watch_name": "Watch Name",
 					"poll_interval": "Poll Interval (minutes)"
 				}
